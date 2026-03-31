@@ -3,8 +3,9 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const fonts = localFont({
   src: [
@@ -31,13 +32,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", cinzel.className, fonts.className, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        cinzel.className,
+        fonts.className,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">
         <div className="flex justify-center">
           <Header />
         </div>
-
+        <Toaster />
         {children}
       </body>
     </html>

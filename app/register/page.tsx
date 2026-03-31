@@ -1,7 +1,11 @@
-import React from "react";
+import AuthComponent from "@/components/AuthComponent";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div className="flex justify-center">
+      <AuthComponent />
+    </div>
+  );
 };
 
 export default page;

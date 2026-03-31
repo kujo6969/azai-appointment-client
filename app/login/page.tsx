@@ -1,9 +1,9 @@
-import LoginComponent from "@/components/LoginComponent";
+import AuthComponent from "@/components/AuthComponent";
 
 const page = () => {
   return (
     <div className="flex justify-center">
-      <LoginComponent />
+      <AuthComponent />
     </div>
   );
 };
